@@ -4,7 +4,8 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import passport from 'passport';
 import cookieSession from 'cookie-session';
-import dotenv from 'dotenv/config';
+import dotenv from 'dotenv';
+dotenv.config();
 
 import './Services/passport.js';
 import isLoggedIn from './Middleware/auth.js';
