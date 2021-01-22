@@ -11,8 +11,8 @@ import isLoggedIn from './Middleware/auth.js';
 import messageRoutes from './routes/message.js';
 import userRoutes from './routes/user.js';
 import roomRoutes from './routes/room.js';
-import pusher from './services/pusher.js';
-import db from './services/pusherDb.js';
+import pusher from './Services/pusher.js';
+import db from './Services/pusherDb.js';
 
 const app = express();
 
