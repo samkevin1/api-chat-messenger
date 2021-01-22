@@ -38,9 +38,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 const CONNECTION_URL = 'mongodb+srv://admin:221bakerstreet@cluster0.lvtxl.mongodb.net/chatdb?retryWrites=true&w=majority';
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 9000;;
 
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true})
   .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
   .catch((err) => console.log(err.message));
   
