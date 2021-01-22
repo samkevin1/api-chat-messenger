@@ -14,7 +14,7 @@ passport.deserializeUser(function(user, done) {
 passport.use(new GoogleStrategy({
     clientID: "951053822849-rg92fcg4cfldoma4ptv0vmh496cmba5n.apps.googleusercontent.com",
     clientSecret: "OMLGxPcD8LZbO5JEx7hO2_bC",
-    callbackURL: "http://localhost:9000/api/account/google"
+    callbackURL: "https://chat-messenger-api.herokuapp.com/api/account/google"
   },
   (token, tokenSecret, profile, done) => {
       User.findOne({ googleId: profile.id }, (err, user) => {
